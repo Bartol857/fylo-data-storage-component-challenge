@@ -1,0 +1,163 @@
+@use './colors' as *;
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: $verydarkblue url('../images/bg-mobile.png') center/cover
+		no-repeat;
+	color: $paleblue;
+	font-family: 'Raleway', sans-serif;
+	font-size: 14px;
+}
+
+main{
+    width: 100%;
+}
+
+.box {
+    margin: 0 auto;
+	width: 90%;
+
+	&__title {
+		width: 100%;
+		background-color: $darkblue;
+		border-radius: 15px 100px 15px 15px;
+	}
+
+	&__logo {
+		padding: 40px 50px 0;
+	}
+
+	&__icons {
+		display: flex;
+		padding: 40px 30px;
+	}
+
+	&__icon {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 0 8px;
+		width: 50px;
+		height: 50px;
+		background-color: $verydarkblue;
+        border: 3px solid transparent;
+		border-radius: 10px;
+        transition: background-color .3s, border .3s;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $darkblue;
+            border: 3px solid $verydarkblue;
+        }
+	}
+
+	&__storage {
+        position: relative;
+		margin-top: 15px;
+		padding: 15px 30px 50px;
+		width: 100%;
+		background-color: $darkblue;
+		border-radius: 15px;
+		text-align: center;
+	}
+
+	&__description {
+		padding: 20px 0;
+
+		span {
+			font-weight: bold;
+		}
+	}
+
+	&__bar {
+		width: 100%;
+		height: 20px;
+		background-color: $verydarkblue;
+		border-radius: 10px;
+	}
+
+	&__bar-used {
+        position: relative;
+		height: 100%;
+		width: 81.5%;
+		background: $storagespacegradient;
+		border: 3px solid $verydarkblue;
+		border-radius: 10px;
+        z-index: 0;
+
+		&::after {
+            position: absolute;
+            right: 2px;
+            top: 50%;
+			width: 12px;
+			height: 12px;
+			background-color: $white;
+            border-radius: 50%;
+			content: '';
+            transform: translateY(-50%);
+            z-index: 100;
+		}
+	}
+
+	&__size {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 10px;
+		font-size: 12px;
+		font-weight: bold;
+	}
+
+    &__size-left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: -30px;
+        left: 50%;
+        padding: 15px;
+        width: 55%;
+        background-color: $white;
+        color: $grayishblue;
+        border-radius: 8px;
+        font-size: 13px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-weight: bold;
+        transform: translateX(-50%);
+
+        span{
+            margin-right: 10px;
+            color: $verydarkblue;
+            font-size: 36px;
+        }
+    }
+}
+
+footer {
+	position: absolute;
+	bottom: 10px;
+	width: 100%;
+
+	.attribution {
+		font-size: 11px;
+		text-align: center;
+	}
+	.attribution a {
+		color: hsl(335, 100%, 65%);
+        font-weight: bold;
+	}
+}
+
+@import './desktop'

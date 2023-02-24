@@ -1,0 +1,196 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: hsl(229deg, 57%, 11%) url("../images/bg-mobile.png") center/cover no-repeat;
+  color: hsl(243deg, 100%, 93%);
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+}
+
+main {
+  width: 100%;
+}
+
+.box {
+  margin: 0 auto;
+  width: 90%;
+}
+.box__title {
+  width: 100%;
+  background-color: hsl(228deg, 56%, 26%);
+  border-radius: 15px 100px 15px 15px;
+}
+.box__logo {
+  padding: 40px 50px 0;
+}
+.box__icons {
+  display: flex;
+  padding: 40px 30px;
+}
+.box__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 8px;
+  width: 50px;
+  height: 50px;
+  background-color: hsl(229deg, 57%, 11%);
+  border: 3px solid transparent;
+  border-radius: 10px;
+  transition: background-color 0.3s, border 0.3s;
+  cursor: pointer;
+}
+.box__icon:hover {
+  background-color: hsl(228deg, 56%, 26%);
+  border: 3px solid hsl(229deg, 57%, 11%);
+}
+.box__storage {
+  position: relative;
+  margin-top: 15px;
+  padding: 15px 30px 50px;
+  width: 100%;
+  background-color: hsl(228deg, 56%, 26%);
+  border-radius: 15px;
+  text-align: center;
+}
+.box__description {
+  padding: 20px 0;
+}
+.box__description span {
+  font-weight: bold;
+}
+.box__bar {
+  width: 100%;
+  height: 20px;
+  background-color: hsl(229deg, 57%, 11%);
+  border-radius: 10px;
+}
+.box__bar-used {
+  position: relative;
+  height: 100%;
+  width: 81.5%;
+  background: linear-gradient(90deg, hsl(6deg, 100%, 80%) 0%, hsl(335deg, 100%, 65%) 100%);
+  border: 3px solid hsl(229deg, 57%, 11%);
+  border-radius: 10px;
+  z-index: 0;
+}
+.box__bar-used::after {
+  position: absolute;
+  right: 2px;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  background-color: hsl(0deg, 0%, 100%);
+  border-radius: 50%;
+  content: "";
+  transform: translateY(-50%);
+  z-index: 100;
+}
+.box__size {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: bold;
+}
+.box__size-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  padding: 15px;
+  width: 55%;
+  background-color: hsl(0deg, 0%, 100%);
+  color: hsl(229deg, 7%, 55%);
+  border-radius: 8px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: bold;
+  transform: translateX(-50%);
+}
+.box__size-left span {
+  margin-right: 10px;
+  color: hsl(229deg, 57%, 11%);
+  font-size: 36px;
+}
+
+footer {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+}
+footer .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+footer .attribution a {
+  color: hsl(335deg, 100%, 65%);
+  font-weight: bold;
+}
+
+@media (min-width: 992px) {
+  body {
+    background: hsl(229deg, 57%, 11%) url("../images/bg-desktop.png") bottom no-repeat;
+    background-size: 100% 45%;
+  }
+  .box {
+    display: flex;
+    align-items: end;
+    width: 80%;
+  }
+  .box__title {
+    margin-right: 15px;
+    width: 80%;
+  }
+  .box__storage {
+    position: relative;
+    margin: 0;
+    padding: 10px 30px;
+    height: 150px;
+    text-align: left;
+  }
+  .box__size-left {
+    position: absolute;
+    top: -30px;
+    left: 80%;
+    width: 30%;
+    height: 40%;
+    margin: 0;
+    padding: 0;
+    background-color: hsl(0deg, 0%, 100%);
+    color: hsl(229deg, 7%, 55%);
+    border-radius: 8px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transform: translateX(-50%);
+  }
+  .box__size-left span {
+    color: hsl(229deg, 57%, 11%);
+    font-size: 36px;
+  }
+  .box__size-left::after {
+    display: block;
+    position: absolute;
+    bottom: -11px;
+    right: 0;
+    border: 10px solid hsl(0deg, 0%, 100%);
+    border-color: hsl(0deg, 0%, 100%) hsl(0deg, 0%, 100%) transparent transparent;
+    content: "";
+  }
+}/*# sourceMappingURL=main.css.map */
